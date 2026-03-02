@@ -43,9 +43,6 @@ use Spryker\Zed\WarehouseUser\WarehouseUserDependencyProvider;
  */
 class WarehouseUserBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\WarehouseUser\Business\Creator\WarehouseUserAssignmentCreatorInterface
-     */
     public function createWarehouseUserAssignmentCreator(): WarehouseUserAssignmentCreatorInterface
     {
         return new WarehouseUserAssignmentCreator(
@@ -57,9 +54,6 @@ class WarehouseUserBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\WarehouseUser\Business\Updater\WarehouseUserAssignmentUpdaterInterface
-     */
     public function createWarehouseUserAssignmentUpdater(): WarehouseUserAssignmentUpdaterInterface
     {
         return new WarehouseUserAssignmentUpdater(
@@ -70,9 +64,6 @@ class WarehouseUserBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\WarehouseUser\Business\Updater\WarehouseUserAssignmentStatusUpdaterInterface
-     */
     public function createWarehouseUserAssignmentStatusUpdater(): WarehouseUserAssignmentStatusUpdaterInterface
     {
         return new WarehouseUserAssignmentStatusUpdater(
@@ -81,9 +72,6 @@ class WarehouseUserBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\WarehouseUser\Business\Deleter\WarehouseUserAssignmentDeleterInterface
-     */
     public function createWarehouseUserAssignmentDeleter(): WarehouseUserAssignmentDeleterInterface
     {
         return new WarehouseUserAssignmentDeleter(
@@ -93,57 +81,36 @@ class WarehouseUserBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\WarehouseUser\Business\IdentifierBuilder\WarehouseUserAssignmentIdentifierBuilderInterface
-     */
     public function createWarehouseUserAssignmentIdentifierBuilder(): WarehouseUserAssignmentIdentifierBuilderInterface
     {
         return new WarehouseUserAssignmentIdentifierBuilder();
     }
 
-    /**
-     * @return \Spryker\Zed\WarehouseUser\Business\Expander\WarehouseUserAssignmentExpanderInterface
-     */
     public function createWarehouseUserAssignmentExpander(): WarehouseUserAssignmentExpanderInterface
     {
         return new WarehouseUserAssignmentExpander($this->createWarehouseReader());
     }
 
-    /**
-     * @return \Spryker\Zed\WarehouseUser\Business\Mapper\WarehouseUserAssignmentCriteriaMapperInterface
-     */
     public function createWarehouseUserAssignmentCriteriaMapper(): WarehouseUserAssignmentCriteriaMapperInterface
     {
         return new WarehouseUserAssignmentCriteriaMapper();
     }
 
-    /**
-     * @return \Spryker\Zed\WarehouseUser\Business\Reader\WarehouseReaderInterface
-     */
     public function createWarehouseReader(): WarehouseReaderInterface
     {
         return new WarehouseReader($this->getStockFacade());
     }
 
-    /**
-     * @return \Spryker\Zed\WarehouseUser\Business\Validator\WarehouseUserAssignmentValidatorInterface
-     */
     public function createWarehouseUserAssignmentCreateValidator(): WarehouseUserAssignmentValidatorInterface
     {
         return new WarehouseUserAssignmentValidator($this->getWarehouseUserAssignmentCreateValidatorRules());
     }
 
-    /**
-     * @return \Spryker\Zed\WarehouseUser\Business\Validator\WarehouseUserAssignmentValidatorInterface
-     */
     public function createWarehouseUserAssignmentUpdateValidator(): WarehouseUserAssignmentValidatorInterface
     {
         return new WarehouseUserAssignmentValidator($this->getWarehouseUserAssignmentUpdateValidatorRules());
     }
 
-    /**
-     * @return \Spryker\Zed\WarehouseUser\Business\Validator\Rules\WarehouseUserAssignmentValidatorRuleInterface
-     */
     public function createUserExistsValidatorRule(): WarehouseUserAssignmentValidatorRuleInterface
     {
         return new UserExistsValidatorRule(
@@ -152,9 +119,6 @@ class WarehouseUserBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\WarehouseUser\Business\Validator\Rules\WarehouseUserAssignmentValidatorRuleInterface
-     */
     public function createWarehouseExistsValidatorRule(): WarehouseUserAssignmentValidatorRuleInterface
     {
         return new WarehouseExistsValidatorRule(
@@ -163,9 +127,6 @@ class WarehouseUserBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\WarehouseUser\Business\Validator\Rules\WarehouseUserAssignmentValidatorRuleInterface
-     */
     public function createSingleActiveWarehouseUserAssignmentValidatorRule(): WarehouseUserAssignmentValidatorRuleInterface
     {
         return new SingleActiveWarehouseUserAssignmentValidatorRule(
@@ -173,9 +134,6 @@ class WarehouseUserBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\WarehouseUser\Business\Validator\Rules\WarehouseUserAssignmentValidatorRuleInterface
-     */
     public function createWarehouseUserAssignmentExistsValidatorRule(): WarehouseUserAssignmentValidatorRuleInterface
     {
         return new WarehouseUserAssignmentExistsValidatorRule(
@@ -184,9 +142,6 @@ class WarehouseUserBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\WarehouseUser\Business\Validator\Rules\WarehouseUserAssignmentValidatorRuleInterface
-     */
     public function createWarehouseUserAssignmentAlreadyExistsValidatorRule(): WarehouseUserAssignmentValidatorRuleInterface
     {
         return new WarehouseUserAssignmentAlreadyExistsValidatorRule(
@@ -221,17 +176,11 @@ class WarehouseUserBusinessFactory extends AbstractBusinessFactory
         ];
     }
 
-    /**
-     * @return \Spryker\Zed\WarehouseUser\Dependency\Facade\WarehouseUserToUserFacadeInterface
-     */
     public function getUserFacade(): WarehouseUserToUserFacadeInterface
     {
         return $this->getProvidedDependency(WarehouseUserDependencyProvider::FACADE_USER);
     }
 
-    /**
-     * @return \Spryker\Zed\WarehouseUser\Dependency\Facade\WarehouseUserToStockFacadeInterface
-     */
     public function getStockFacade(): WarehouseUserToStockFacadeInterface
     {
         return $this->getProvidedDependency(WarehouseUserDependencyProvider::FACADE_STOCK);

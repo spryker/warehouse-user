@@ -30,9 +30,6 @@ class DeleteWarehouseUserAssignmentCollectionFacadeTest extends Unit
      */
     protected WarehouseUserBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     public function testDeleteWarehouseUserAssignmentCollectionDeletesWarehouseUserAssignmentFromPersistenceById(): void
     {
         // Arrange
@@ -55,9 +52,6 @@ class DeleteWarehouseUserAssignmentCollectionFacadeTest extends Unit
         $this->tester->assertWarehouseUserAssignmentNotPersisted($warehouseUserAssignmentTransfer->getIdWarehouseUserAssignmentOrFail());
     }
 
-    /**
-     * @return void
-     */
     public function testDeleteWarehouseUserAssignmentCollectionDeletesWarehouseUserAssignmentFromPersistenceByUuid(): void
     {
         // Arrange

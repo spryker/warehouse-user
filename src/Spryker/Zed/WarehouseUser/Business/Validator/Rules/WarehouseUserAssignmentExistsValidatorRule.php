@@ -33,10 +33,6 @@ class WarehouseUserAssignmentExistsValidatorRule implements WarehouseUserAssignm
      */
     protected WarehouseUserAssignmentIdentifierBuilderInterface $warehouseUserAssignmentIdentifierBuilder;
 
-    /**
-     * @param \Spryker\Zed\WarehouseUser\Persistence\WarehouseUserRepositoryInterface $warehouseUserRepository
-     * @param \Spryker\Zed\WarehouseUser\Business\IdentifierBuilder\WarehouseUserAssignmentIdentifierBuilderInterface $warehouseUserAssignmentIdentifierBuilder
-     */
     public function __construct(
         WarehouseUserRepositoryInterface $warehouseUserRepository,
         WarehouseUserAssignmentIdentifierBuilderInterface $warehouseUserAssignmentIdentifierBuilder
@@ -133,12 +129,6 @@ class WarehouseUserAssignmentExistsValidatorRule implements WarehouseUserAssignm
         return $indexedWarehouseUserAssignmentTransfers;
     }
 
-    /**
-     * @param string $message
-     * @param string $identifier
-     *
-     * @return \Generated\Shared\Transfer\ErrorTransfer
-     */
     protected function createErrorTransfer(string $message, string $identifier): ErrorTransfer
     {
         return (new ErrorTransfer())

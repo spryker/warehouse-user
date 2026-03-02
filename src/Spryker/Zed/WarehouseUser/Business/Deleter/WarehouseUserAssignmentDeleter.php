@@ -35,11 +35,6 @@ class WarehouseUserAssignmentDeleter implements WarehouseUserAssignmentDeleterIn
      */
     protected WarehouseUserAssignmentCriteriaMapperInterface $warehouseUserAssignmentCriteriaMapper;
 
-    /**
-     * @param \Spryker\Zed\WarehouseUser\Persistence\WarehouseUserEntityManagerInterface $warehouseUserEntityManager
-     * @param \Spryker\Zed\WarehouseUser\Persistence\WarehouseUserRepositoryInterface $warehouseUserRepository
-     * @param \Spryker\Zed\WarehouseUser\Business\Mapper\WarehouseUserAssignmentCriteriaMapperInterface $warehouseUserAssignmentCriteriaMapper
-     */
     public function __construct(
         WarehouseUserEntityManagerInterface $warehouseUserEntityManager,
         WarehouseUserRepositoryInterface $warehouseUserRepository,
@@ -50,11 +45,6 @@ class WarehouseUserAssignmentDeleter implements WarehouseUserAssignmentDeleterIn
         $this->warehouseUserAssignmentCriteriaMapper = $warehouseUserAssignmentCriteriaMapper;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\WarehouseUserAssignmentCollectionDeleteCriteriaTransfer $warehouseUserAssignmentCollectionDeleteCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\WarehouseUserAssignmentCollectionResponseTransfer
-     */
     public function deleteWarehouseUserAssignmentCollection(
         WarehouseUserAssignmentCollectionDeleteCriteriaTransfer $warehouseUserAssignmentCollectionDeleteCriteriaTransfer
     ): WarehouseUserAssignmentCollectionResponseTransfer {
@@ -70,11 +60,6 @@ class WarehouseUserAssignmentDeleter implements WarehouseUserAssignmentDeleterIn
         });
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\WarehouseUserAssignmentCollectionTransfer $warehouseUserAssignmentCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\WarehouseUserAssignmentCollectionResponseTransfer
-     */
     protected function executeDeleteWarehouseUserCollectionTransaction(
         WarehouseUserAssignmentCollectionTransfer $warehouseUserAssignmentCollectionTransfer
     ): WarehouseUserAssignmentCollectionResponseTransfer {

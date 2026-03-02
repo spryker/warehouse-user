@@ -29,10 +29,6 @@ class WarehouseUserAssignmentStatusUpdater implements WarehouseUserAssignmentSta
      */
     protected WarehouseUserEntityManagerInterface $warehouseUserEntityManager;
 
-    /**
-     * @param \Spryker\Zed\WarehouseUser\Persistence\WarehouseUserRepositoryInterface $warehouseUserRepository
-     * @param \Spryker\Zed\WarehouseUser\Persistence\WarehouseUserEntityManagerInterface $warehouseUserEntityManager
-     */
     public function __construct(
         WarehouseUserRepositoryInterface $warehouseUserRepository,
         WarehouseUserEntityManagerInterface $warehouseUserEntityManager
@@ -156,22 +152,11 @@ class WarehouseUserAssignmentStatusUpdater implements WarehouseUserAssignmentSta
         return false;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\WarehouseUserAssignmentTransfer $warehouseUserAssignmentTransfer
-     *
-     * @return bool
-     */
     protected function isNewWarehouseUserAssignment(WarehouseUserAssignmentTransfer $warehouseUserAssignmentTransfer): bool
     {
         return $warehouseUserAssignmentTransfer->getIdWarehouseUserAssignment() === null && $warehouseUserAssignmentTransfer->getUuid() === null;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\WarehouseUserAssignmentTransfer $warehouseUserAssignmentTransferA
-     * @param \Generated\Shared\Transfer\WarehouseUserAssignmentTransfer $warehouseUserAssignmentTransferB
-     *
-     * @return bool
-     */
     protected function isSameWarehouseUserAssignment(
         WarehouseUserAssignmentTransfer $warehouseUserAssignmentTransferA,
         WarehouseUserAssignmentTransfer $warehouseUserAssignmentTransferB

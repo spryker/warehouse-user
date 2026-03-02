@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\StockCriteriaTransfer;
 
 interface WarehouseUserToStockFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\StockCriteriaTransfer $stockCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\StockCollectionTransfer
-     */
     public function getStockCollection(StockCriteriaTransfer $stockCriteriaTransfer): StockCollectionTransfer;
 }

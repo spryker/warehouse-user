@@ -34,9 +34,6 @@ class GetWarehouseUserAssignmentCollectionFacadeTest extends Unit
      */
     protected WarehouseUserBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -44,9 +41,6 @@ class GetWarehouseUserAssignmentCollectionFacadeTest extends Unit
         $this->tester->ensureWarehouseUserAssignmentTableIsEmpty();
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsCollectionOfWarehouseUserAssignmentsByUuid(): void
     {
         // Arrange
@@ -74,9 +68,6 @@ class GetWarehouseUserAssignmentCollectionFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsCollectionOfWarehouseUserAssignmentsById(): void
     {
         // Arrange
@@ -104,9 +95,6 @@ class GetWarehouseUserAssignmentCollectionFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsCollectionOfWarehouseUserAssignmentsByUserUuid(): void
     {
         // Arrange
@@ -134,9 +122,6 @@ class GetWarehouseUserAssignmentCollectionFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsCollectionOfWarehouseUserAssignmentsByWarehouseUuid(): void
     {
         // Arrange
@@ -164,9 +149,6 @@ class GetWarehouseUserAssignmentCollectionFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsCollectionOfWarehouseUserAssignmentsByIsActiveStatus(): void
     {
         // Arrange
@@ -195,9 +177,6 @@ class GetWarehouseUserAssignmentCollectionFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsCollectionOfWarehouseUserAssignmentsSorted(): void
     {
         // Arrange
@@ -239,9 +218,6 @@ class GetWarehouseUserAssignmentCollectionFacadeTest extends Unit
         $this->tester->assertSameWarehouseUserAssignment($warehouseUserAssignmentTransfer1, $warehouseUserAssignmentCollectionIterator->current());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsCollectionOfWarehouseUserAssignmentsPaginatedByLimitAndOffset(): void
     {
         // Arrange
@@ -282,9 +258,6 @@ class GetWarehouseUserAssignmentCollectionFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsCollectionOfWarehouseUserAssignmentsPaginatedByPageAndMaxPerPage(): void
     {
         // Arrange

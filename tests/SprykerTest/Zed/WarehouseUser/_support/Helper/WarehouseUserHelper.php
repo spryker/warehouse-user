@@ -47,17 +47,11 @@ class WarehouseUserHelper extends Module
         return $warehouseUserAssignmentTransfer->fromArray($warehouseUserAssignmentEntity->toArray(), true);
     }
 
-    /**
-     * @return void
-     */
     public function ensureWarehouseUserAssignmentTableIsEmpty(): void
     {
         $this->getWarehouseUserAssignmentQuery()->deleteAll();
     }
 
-    /**
-     * @return \Orm\Zed\WarehouseUser\Persistence\SpyWarehouseUserAssignmentQuery
-     */
     protected function getWarehouseUserAssignmentQuery(): SpyWarehouseUserAssignmentQuery
     {
         return SpyWarehouseUserAssignmentQuery::create();

@@ -17,11 +17,6 @@ use Spryker\Zed\Kernel\Persistence\AbstractEntityManager;
  */
 class WarehouseUserEntityManager extends AbstractEntityManager implements WarehouseUserEntityManagerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\WarehouseUserAssignmentTransfer $warehouseUserAssignmentTransfer
-     *
-     * @return \Generated\Shared\Transfer\WarehouseUserAssignmentTransfer
-     */
     public function createWarehouseUserAssignment(WarehouseUserAssignmentTransfer $warehouseUserAssignmentTransfer): WarehouseUserAssignmentTransfer
     {
         $warehouseUserMapper = $this->getFactory()->createWarehouseUserMapper();
@@ -38,11 +33,6 @@ class WarehouseUserEntityManager extends AbstractEntityManager implements Wareho
         );
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\WarehouseUserAssignmentTransfer $warehouseUserAssignmentTransfer
-     *
-     * @return \Generated\Shared\Transfer\WarehouseUserAssignmentTransfer
-     */
     public function updateWarehouseUserAssignment(WarehouseUserAssignmentTransfer $warehouseUserAssignmentTransfer): WarehouseUserAssignmentTransfer
     {
         $warehouseUserAssignmentEntity = $this->getFactory()
@@ -68,11 +58,6 @@ class WarehouseUserEntityManager extends AbstractEntityManager implements Wareho
         );
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\WarehouseUserAssignmentCollectionTransfer $warehouseUserAssignmentCollectionTransfer
-     *
-     * @return void
-     */
     public function deleteWarehouseUserAssignments(WarehouseUserAssignmentCollectionTransfer $warehouseUserAssignmentCollectionTransfer): void
     {
         $warehouseUserAssignmentIds = [];

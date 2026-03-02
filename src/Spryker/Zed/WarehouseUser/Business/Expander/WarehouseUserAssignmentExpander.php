@@ -18,9 +18,6 @@ class WarehouseUserAssignmentExpander implements WarehouseUserAssignmentExpander
      */
     protected WarehouseReaderInterface $warehouseReader;
 
-    /**
-     * @param \Spryker\Zed\WarehouseUser\Business\Reader\WarehouseReaderInterface $warehouseReader
-     */
     public function __construct(WarehouseReaderInterface $warehouseReader)
     {
         $this->warehouseReader = $warehouseReader;

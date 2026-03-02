@@ -12,12 +12,6 @@ use Generated\Shared\Transfer\WarehouseUserAssignmentCriteriaTransfer;
 
 interface WarehouseUserAssignmentCriteriaMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\WarehouseUserAssignmentCollectionDeleteCriteriaTransfer $warehouseUserAssignmentCollectionDeleteCriteriaTransfer
-     * @param \Generated\Shared\Transfer\WarehouseUserAssignmentCriteriaTransfer $warehouseUserAssignmentCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\WarehouseUserAssignmentCriteriaTransfer
-     */
     public function mapWarehouseUserAssignmentCollectionDeleteCriteriaTransferToWarehouseUserAssignmentCriteriaTransfer(
         WarehouseUserAssignmentCollectionDeleteCriteriaTransfer $warehouseUserAssignmentCollectionDeleteCriteriaTransfer,
         WarehouseUserAssignmentCriteriaTransfer $warehouseUserAssignmentCriteriaTransfer

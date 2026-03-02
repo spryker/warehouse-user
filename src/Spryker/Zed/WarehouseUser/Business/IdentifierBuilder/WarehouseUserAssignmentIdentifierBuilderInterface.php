@@ -11,10 +11,5 @@ use Generated\Shared\Transfer\WarehouseUserAssignmentTransfer;
 
 interface WarehouseUserAssignmentIdentifierBuilderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\WarehouseUserAssignmentTransfer $warehouseUserAssignmentTransfer
-     *
-     * @return string
-     */
     public function buildIdentifier(WarehouseUserAssignmentTransfer $warehouseUserAssignmentTransfer): string;
 }

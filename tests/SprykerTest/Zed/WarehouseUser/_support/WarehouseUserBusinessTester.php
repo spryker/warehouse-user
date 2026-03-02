@@ -57,12 +57,6 @@ class WarehouseUserBusinessTester extends Actor
      */
     protected const NON_EXISTING_STOCK_ID = -1;
 
-    /**
-     * @param \Generated\Shared\Transfer\WarehouseUserAssignmentTransfer $expectedWarehouseUserAssignment
-     * @param \Generated\Shared\Transfer\WarehouseUserAssignmentTransfer $actualWarehouseUserAssignmentTransfer
-     *
-     * @return void
-     */
     public function assertSameWarehouseUserAssignment(
         WarehouseUserAssignmentTransfer $expectedWarehouseUserAssignment,
         WarehouseUserAssignmentTransfer $actualWarehouseUserAssignmentTransfer
@@ -75,9 +69,6 @@ class WarehouseUserBusinessTester extends Actor
         $this->assertSame($expectedWarehouseUserAssignment->getWarehouseOrFail()->getIdStockOrFail(), $actualWarehouseUserAssignmentTransfer->getWarehouseOrFail()->getIdStock());
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\StockTransfer
-     */
     public function getNotExistingStockTransfer(): StockTransfer
     {
         return (new StockBuilder([
@@ -86,9 +77,6 @@ class WarehouseUserBusinessTester extends Actor
         ]))->build();
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\WarehouseUserAssignmentTransfer
-     */
     public function getNotExistingWarehouseUserAssignmentTransfer(): WarehouseUserAssignmentTransfer
     {
         $warehouseUserAssignmentTransfer = (new WarehouseUserAssignmentBuilder([
@@ -101,11 +89,6 @@ class WarehouseUserBusinessTester extends Actor
         return $warehouseUserAssignmentTransfer;
     }
 
-    /**
-     * @param int $idWarehouseUserAssignment
-     *
-     * @return void
-     */
     public function assertWarehouseUserAssignmentNotPersisted(int $idWarehouseUserAssignment): void
     {
         $this->assertSame(
@@ -116,11 +99,6 @@ class WarehouseUserBusinessTester extends Actor
         );
     }
 
-    /**
-     * @param int $idWarehouseUserAssignment
-     *
-     * @return \Orm\Zed\WarehouseUser\Persistence\SpyWarehouseUserAssignment|null
-     */
     public function findWarehouseUserAssignment(int $idWarehouseUserAssignment): ?SpyWarehouseUserAssignment
     {
         return $this->getWarehouseUserAssignmentQuery()
@@ -128,9 +106,6 @@ class WarehouseUserBusinessTester extends Actor
             ->findOne();
     }
 
-    /**
-     * @return \Orm\Zed\WarehouseUser\Persistence\SpyWarehouseUserAssignmentQuery
-     */
     protected function getWarehouseUserAssignmentQuery(): SpyWarehouseUserAssignmentQuery
     {
         return SpyWarehouseUserAssignmentQuery::create();

@@ -26,9 +26,6 @@ class WarehouseUserPersistenceFactory extends AbstractPersistenceFactory
         return SpyWarehouseUserAssignmentQuery::create();
     }
 
-    /**
-     * @return \Spryker\Zed\WarehouseUser\Persistence\Propel\Mapper\WarehouseUserMapper
-     */
     public function createWarehouseUserMapper(): WarehouseUserMapper
     {
         return new WarehouseUserMapper();

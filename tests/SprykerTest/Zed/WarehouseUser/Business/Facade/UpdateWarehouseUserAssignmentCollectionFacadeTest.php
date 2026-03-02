@@ -72,9 +72,6 @@ class UpdateWarehouseUserAssignmentCollectionFacadeTest extends Unit
      */
     protected WarehouseUserBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     public function testPersistsWarehouseUserAssignment(): void
     {
         // Arrange
@@ -110,9 +107,6 @@ class UpdateWarehouseUserAssignmentCollectionFacadeTest extends Unit
         $this->assertSame($stockTransfer->getIdStockOrFail(), $updatedWarehouseUserAssignmentTransfer->getWarehouseOrFail()->getIdStock());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsErrorWhenWarehouseUserAssignmentNotExist(): void
     {
         // Arrange
@@ -131,9 +125,6 @@ class UpdateWarehouseUserAssignmentCollectionFacadeTest extends Unit
         $this->assertSame(static::GLOSSARY_KEY_VALIDATION_WAREHOUSE_USER_ASSIGNMENT_NOT_FOUND, $errorTransfer->getMessage());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsErrorWhenUserDoesNotExist(): void
     {
         // Arrange
@@ -157,9 +148,6 @@ class UpdateWarehouseUserAssignmentCollectionFacadeTest extends Unit
         $this->assertSame(static::GLOSSARY_KEY_VALIDATION_USER_NOT_FOUND, $errorTransfer->getMessage());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsErrorWhenWarehouseDoesNotExist(): void
     {
         // Arrange
@@ -183,9 +171,6 @@ class UpdateWarehouseUserAssignmentCollectionFacadeTest extends Unit
         $this->assertSame(static::GLOSSARY_KEY_VALIDATION_WAREHOUSE_NOT_FOUND, $errorTransfer->getMessage());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsErrorWhenWarehouseWithIncorrectUuidWithoutIdStockIsProvided(): void
     {
         // Arrange
@@ -209,9 +194,6 @@ class UpdateWarehouseUserAssignmentCollectionFacadeTest extends Unit
         $this->assertSame(static::GLOSSARY_KEY_VALIDATION_WAREHOUSE_NOT_FOUND, $errorTransfer->getMessage());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsNoErrorsWhenActiveWarehouseUserAssignmentNotChanged(): void
     {
         // Arrange
@@ -232,9 +214,6 @@ class UpdateWarehouseUserAssignmentCollectionFacadeTest extends Unit
         $this->assertCount(0, $warehouseUserAssignmentCollectionResponseTransfer->getErrors());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsNoErrorsWhenActiveWarehouseUserAssignmentChanged(): void
     {
         // Arrange
@@ -261,9 +240,6 @@ class UpdateWarehouseUserAssignmentCollectionFacadeTest extends Unit
         $this->assertCount(0, $warehouseUserAssignmentCollectionResponseTransfer->getErrors());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsErrorWhenRequestContainsMoreThanOneActiveWarehouseUserAssignment(): void
     {
         // Arrange
@@ -297,9 +273,6 @@ class UpdateWarehouseUserAssignmentCollectionFacadeTest extends Unit
         $this->assertSame(static::GLOSSARY_KEY_VALIDATION_TOO_MANY_ACTIVE_WAREHOUSE_ASSIGNMENTS, $errorTransfer2->getMessage());
     }
 
-    /**
-     * @return void
-     */
     public function testDeactivatesCurrentlyActiveWarehouseUserAssignmentWhenUpdatedWarehouseUserAssignmentIsActive(): void
     {
         // Arrange
@@ -335,9 +308,6 @@ class UpdateWarehouseUserAssignmentCollectionFacadeTest extends Unit
         $this->assertTrue($activeWarehouseUserAssignmentEntity->getIsActive());
     }
 
-    /**
-     * @return void
-     */
     public function testShouldNotReturnErrorWhenIsActiveIsNotProvided(): void
     {
         // Arrange

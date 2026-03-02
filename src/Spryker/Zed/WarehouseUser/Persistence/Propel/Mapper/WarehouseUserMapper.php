@@ -37,12 +37,6 @@ class WarehouseUserMapper
         return $warehouseUserAssignmentCollectionTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\WarehouseUserAssignmentTransfer $warehouseUserAssignmentTransfer
-     * @param \Orm\Zed\WarehouseUser\Persistence\SpyWarehouseUserAssignment $warehouseUserAssignmentEntity
-     *
-     * @return \Orm\Zed\WarehouseUser\Persistence\SpyWarehouseUserAssignment
-     */
     public function mapWarehouseUserAssignmentTransferToWarehouseUserAssignmentEntity(
         WarehouseUserAssignmentTransfer $warehouseUserAssignmentTransfer,
         SpyWarehouseUserAssignment $warehouseUserAssignmentEntity
@@ -57,12 +51,6 @@ class WarehouseUserMapper
         return $warehouseUserAssignmentEntity;
     }
 
-    /**
-     * @param \Orm\Zed\WarehouseUser\Persistence\SpyWarehouseUserAssignment $warehouseUserAssignmentEntity
-     * @param \Generated\Shared\Transfer\WarehouseUserAssignmentTransfer $warehouseUserAssignmentTransfer
-     *
-     * @return \Generated\Shared\Transfer\WarehouseUserAssignmentTransfer
-     */
     public function mapWarehouseUserAssignmentEntityToWarehouseUserAssignmentTransfer(
         SpyWarehouseUserAssignment $warehouseUserAssignmentEntity,
         WarehouseUserAssignmentTransfer $warehouseUserAssignmentTransfer
@@ -73,12 +61,6 @@ class WarehouseUserMapper
         return $warehouseUserAssignmentTransfer->setWarehouse($stockTransfer);
     }
 
-    /**
-     * @param \Orm\Zed\Stock\Persistence\SpyStock $stockEntity
-     * @param \Generated\Shared\Transfer\StockTransfer $stockTransfer
-     *
-     * @return \Generated\Shared\Transfer\StockTransfer
-     */
     protected function mapStockEntityToStockTransfer(SpyStock $stockEntity, StockTransfer $stockTransfer): StockTransfer
     {
         return $stockTransfer->fromArray($stockEntity->toArray());

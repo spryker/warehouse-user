@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\WarehouseUserAssignmentCollectionResponseTransfer;
 
 interface WarehouseUserAssignmentDeleterInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\WarehouseUserAssignmentCollectionDeleteCriteriaTransfer $warehouseUserAssignmentCollectionDeleteCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\WarehouseUserAssignmentCollectionResponseTransfer
-     */
     public function deleteWarehouseUserAssignmentCollection(
         WarehouseUserAssignmentCollectionDeleteCriteriaTransfer $warehouseUserAssignmentCollectionDeleteCriteriaTransfer
     ): WarehouseUserAssignmentCollectionResponseTransfer;

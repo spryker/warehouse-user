@@ -31,10 +31,6 @@ class WarehouseExistsValidatorRule implements WarehouseUserAssignmentValidatorRu
      */
     protected WarehouseUserAssignmentIdentifierBuilderInterface $warehouseUserAssignmentIdentifierBuilder;
 
-    /**
-     * @param \Spryker\Zed\WarehouseUser\Business\Reader\WarehouseReaderInterface $warehouseReader
-     * @param \Spryker\Zed\WarehouseUser\Business\IdentifierBuilder\WarehouseUserAssignmentIdentifierBuilderInterface $warehouseUserAssignmentIdentifierBuilder
-     */
     public function __construct(
         WarehouseReaderInterface $warehouseReader,
         WarehouseUserAssignmentIdentifierBuilderInterface $warehouseUserAssignmentIdentifierBuilder
@@ -109,12 +105,6 @@ class WarehouseExistsValidatorRule implements WarehouseUserAssignmentValidatorRu
         return $indexedStockTransfers;
     }
 
-    /**
-     * @param string $message
-     * @param string $identifier
-     *
-     * @return \Generated\Shared\Transfer\ErrorTransfer
-     */
     protected function createErrorTransfer(string $message, string $identifier): ErrorTransfer
     {
         return (new ErrorTransfer())

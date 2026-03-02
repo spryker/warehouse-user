@@ -47,13 +47,6 @@ class WarehouseUserAssignmentCreator implements WarehouseUserAssignmentCreatorIn
      */
     protected WarehouseUserAssignmentIdentifierBuilderInterface $warehouseUserAssignmentIdentifierBuilder;
 
-    /**
-     * @param \Spryker\Zed\WarehouseUser\Persistence\WarehouseUserEntityManagerInterface $warehouseUserEntityManager
-     * @param \Spryker\Zed\WarehouseUser\Business\Expander\WarehouseUserAssignmentExpanderInterface $warehouseUserAssignmentExpander
-     * @param \Spryker\Zed\WarehouseUser\Business\Validator\WarehouseUserAssignmentValidatorInterface $warehouseUserAssignmentValidator
-     * @param \Spryker\Zed\WarehouseUser\Business\Updater\WarehouseUserAssignmentStatusUpdaterInterface $warehouseUserAssignmentStatusUpdater
-     * @param \Spryker\Zed\WarehouseUser\Business\IdentifierBuilder\WarehouseUserAssignmentIdentifierBuilderInterface $warehouseUserAssignmentIdentifierBuilder
-     */
     public function __construct(
         WarehouseUserEntityManagerInterface $warehouseUserEntityManager,
         WarehouseUserAssignmentExpanderInterface $warehouseUserAssignmentExpander,
@@ -68,11 +61,6 @@ class WarehouseUserAssignmentCreator implements WarehouseUserAssignmentCreatorIn
         $this->warehouseUserAssignmentIdentifierBuilder = $warehouseUserAssignmentIdentifierBuilder;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\WarehouseUserAssignmentCollectionRequestTransfer $warehouseUserAssignmentCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\WarehouseUserAssignmentCollectionResponseTransfer
-     */
     public function createWarehouseUserAssignmentCollection(
         WarehouseUserAssignmentCollectionRequestTransfer $warehouseUserAssignmentCollectionRequestTransfer
     ): WarehouseUserAssignmentCollectionResponseTransfer {

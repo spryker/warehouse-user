@@ -20,9 +20,6 @@ class WarehouseReader implements WarehouseReaderInterface
      */
     protected WarehouseUserToStockFacadeInterface $stockFacade;
 
-    /**
-     * @param \Spryker\Zed\WarehouseUser\Dependency\Facade\WarehouseUserToStockFacadeInterface $stockFacade
-     */
     public function __construct(WarehouseUserToStockFacadeInterface $stockFacade)
     {
         $this->stockFacade = $stockFacade;

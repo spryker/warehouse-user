@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\WarehouseUserAssignmentCollectionResponseTransfer;
 
 interface WarehouseUserAssignmentUpdaterInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\WarehouseUserAssignmentCollectionRequestTransfer $warehouseUserAssignmentCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\WarehouseUserAssignmentCollectionResponseTransfer
-     */
     public function updateWarehouseUserAssignmentCollection(
         WarehouseUserAssignmentCollectionRequestTransfer $warehouseUserAssignmentCollectionRequestTransfer
     ): WarehouseUserAssignmentCollectionResponseTransfer;

@@ -40,12 +40,6 @@ class WarehouseUserAssignmentUpdater implements WarehouseUserAssignmentUpdaterIn
      */
     protected WarehouseUserAssignmentIdentifierBuilderInterface $warehouseUserAssignmentIdentifierBuilder;
 
-    /**
-     * @param \Spryker\Zed\WarehouseUser\Persistence\WarehouseUserEntityManagerInterface $warehouseUserEntityManager
-     * @param \Spryker\Zed\WarehouseUser\Business\Validator\WarehouseUserAssignmentValidatorInterface $warehouseUserAssignmentValidator
-     * @param \Spryker\Zed\WarehouseUser\Business\Updater\WarehouseUserAssignmentStatusUpdaterInterface $warehouseUserAssignmentStatusUpdater
-     * @param \Spryker\Zed\WarehouseUser\Business\IdentifierBuilder\WarehouseUserAssignmentIdentifierBuilderInterface $warehouseUserAssignmentIdentifierBuilder
-     */
     public function __construct(
         WarehouseUserEntityManagerInterface $warehouseUserEntityManager,
         WarehouseUserAssignmentValidatorInterface $warehouseUserAssignmentValidator,
@@ -58,11 +52,6 @@ class WarehouseUserAssignmentUpdater implements WarehouseUserAssignmentUpdaterIn
         $this->warehouseUserAssignmentIdentifierBuilder = $warehouseUserAssignmentIdentifierBuilder;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\WarehouseUserAssignmentCollectionRequestTransfer $warehouseUserAssignmentCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\WarehouseUserAssignmentCollectionResponseTransfer
-     */
     public function updateWarehouseUserAssignmentCollection(
         WarehouseUserAssignmentCollectionRequestTransfer $warehouseUserAssignmentCollectionRequestTransfer
     ): WarehouseUserAssignmentCollectionResponseTransfer {

@@ -25,11 +25,6 @@ class WarehouseUserToStockFacadeBridge implements WarehouseUserToStockFacadeInte
         $this->stockFacade = $stockFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StockCriteriaTransfer $stockCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\StockCollectionTransfer
-     */
     public function getStockCollection(StockCriteriaTransfer $stockCriteriaTransfer): StockCollectionTransfer
     {
         return $this->stockFacade->getStockCollection($stockCriteriaTransfer);
